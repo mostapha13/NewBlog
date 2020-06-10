@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Blog.DataAccessQuery/1.0.0": {
+        "dependencies": {
+          "Blog.Domains": "1.0.0"
+        },
+        "runtime": {
+          "Blog.DataAccessQuery.dll": {}
+        }
+      },
+      "Blog.Domains/1.0.0": {
+        "runtime": {
+          "Blog.Domains.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Blog.DataAccessQuery/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Blog.Domains/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

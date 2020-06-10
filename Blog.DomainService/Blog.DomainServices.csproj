@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Blog.Domain\Blog.Domains.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Authors\" />
+    <Folder Include="Comments\" />
+    <Folder Include="Subjects\" />
+    <Folder Include="Posts\" />
+  </ItemGroup>
+
+</Project>

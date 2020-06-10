@@ -1,0 +1,12 @@
+C:\Dotin\new\Blog\Blog\Blog.DataAccess\bin\Debug\netcoreapp3.1\Blog.DataAccessCommand.deps.json
+C:\Dotin\new\Blog\Blog\Blog.DataAccess\bin\Debug\netcoreapp3.1\Blog.DataAccessCommand.dll
+C:\Dotin\new\Blog\Blog\Blog.DataAccess\bin\Debug\netcoreapp3.1\Blog.DataAccessCommand.pdb
+C:\Dotin\new\Blog\Blog\Blog.DataAccess\bin\Debug\netcoreapp3.1\Blog.Domains.dll
+C:\Dotin\new\Blog\Blog\Blog.DataAccess\bin\Debug\netcoreapp3.1\Blog.Domains.pdb
+C:\Dotin\new\Blog\Blog\Blog.DataAccess\obj\Debug\netcoreapp3.1\Blog.DataAccessCommand.csprojAssemblyReference.cache
+C:\Dotin\new\Blog\Blog\Blog.DataAccess\obj\Debug\netcoreapp3.1\Blog.DataAccessCommand.AssemblyInfoInputs.cache
+C:\Dotin\new\Blog\Blog\Blog.DataAccess\obj\Debug\netcoreapp3.1\Blog.DataAccessCommand.AssemblyInfo.cs
+C:\Dotin\new\Blog\Blog\Blog.DataAccess\obj\Debug\netcoreapp3.1\Blog.DataAccessCommand.csproj.CopyComplete
+C:\Dotin\new\Blog\Blog\Blog.DataAccess\obj\Debug\netcoreapp3.1\Blog.DataAccessCommand.dll
+C:\Dotin\new\Blog\Blog\Blog.DataAccess\obj\Debug\netcoreapp3.1\Blog.DataAccessCommand.pdb
+C:\Dotin\new\Blog\Blog\Blog.DataAccess\obj\Debug\netcoreapp3.1\Blog.DataAccessCommand.csproj.CoreCompileInputs.cache

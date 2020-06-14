@@ -10,17 +10,13 @@ namespace Blog.Domains.Commons
     public interface IUnitOfWork:IDisposable
     {
         IAuthorRepositoryCommand AuthorRepositoryCommand { get;}
-        IAuthorRepositoryCommand RepositoryCommand { get;}
-
+      
         IPostRepositoryCommand PostRepositoryCommand { get;}
-        IPostRepositoryQuery PostRepositoryQuery { get;}
-
+      
         ICommentRepositoryCommand CommentRepositoryCommand { get;}
-        ICommentRepositoryQuery CommentRepositoryQuery { get;}
-
+    
         ISubjectRepositoryCommand SubjectRepositoryCommand { get;}
-        ISubjectRepositoryQuery SubjectRepositoryQuery { get;}
-
+     
         Task Save();
     }
 }

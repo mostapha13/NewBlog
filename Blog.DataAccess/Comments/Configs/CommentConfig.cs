@@ -10,11 +10,7 @@ namespace Blog.DataAccessCommands.Comments.Configs
         {
             builder.Property(c=>c.Text).IsRequired().HasMaxLength(500);
 
-
-
-            
-
-
+             
         }
 
 

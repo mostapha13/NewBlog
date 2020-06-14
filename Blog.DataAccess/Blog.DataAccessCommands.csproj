@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Blog.DataAccessQuery\Blog.DataAccessQueries.csproj" />
+
     <ProjectReference Include="..\Blog.Domain\Blog.Domains.csproj" />
   </ItemGroup>
 

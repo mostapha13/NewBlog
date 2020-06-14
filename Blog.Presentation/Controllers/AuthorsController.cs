@@ -8,8 +8,10 @@ using Microsoft.EntityFrameworkCore;
 using Blog.DataAccessCommand.Context;
 using Blog.Domains.Authors.Commands;
 using Blog.Domains.Authors.Entities;
+using Blog.Domains.Authors.Queries;
 using Blog.Domains.Enums;
 using MediatR;
+using Newtonsoft.Json;
 
 namespace Blog.Presentation.Controllers
 {
@@ -24,26 +26,33 @@ namespace Blog.Presentation.Controllers
             _mediator = mediator;
         }
 
-        //// GET: api/Authors
-        //[HttpGet]
-        //public async Task<ActionResult<IEnumerable<Author>>> GetAuthors()
-        //{
-        //    return await _context.Authors.ToListAsync();
-        //}
+        // GET: api/Authors
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Author>>> GetAuthors()
+        {
+            var query = new GetAllAuthorQuery();
+            var result = await _mediator.Send(query);
+            return result.ToList();
+        }
 
-        //// GET: api/Authors/5
-        //[HttpGet("{id}")]
-        //public async Task<ActionResult<Author>> GetAuthor(int id)
-        //{
-        //    var author = await _context.Authors.FindAsync(id);
+        // GET: api/Authors/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Author>> GetAuthor(int id)
+        {
 
-        //    if (author == null)
-        //    {
-        //        return NotFound();
-        //    }
+            var author = await _mediator.Send(new GetAuthorByIdQuery(id));
 
-        //    return author;
-        //}
+            if (author == null)
+            {
+                return NotFound(new { status = 404, into = "کاربری یافت نشد." });
+            }
+
+            return author;
+
+
+        }
+
+
 
         //// PUT: api/Authors/5
         //// To protect from overposting attacks, enable the specific properties you want to bind to, for
@@ -95,7 +104,7 @@ namespace Blog.Presentation.Controllers
             switch (result)
             {
                 case ResultStatus.Success:
-                    return Ok(new { status=201, info = "ثبت کاربر با موفقیت انجام شد." });
+                    return Ok(new { status = 201, info = "ثبت کاربر با موفقیت انجام شد." });
                 case ResultStatus.Error:
                     return BadRequest(new { status = 400, into = "خطایی رخ داده است." });
                 case ResultStatus.Failed:

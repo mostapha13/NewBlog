@@ -12,12 +12,7 @@ namespace Blog.ApplicationServices.Authors.Commands.Handlers
 {
     public class AddAuthorCommandHandler : IRequestHandler<AddAuthorCommand, ResultStatus>
     {
-        //private readonly IAuthorRepositoryCommand _command;
-
-        //public AddAuthorCommandHandler(IAuthorRepositoryCommand command)
-        //{
-        //    _command = command;
-        //}
+    
 
         private readonly IUnitOfWork _command;
 

@@ -1,33 +1,34 @@
-﻿using Blog.Domains.Authors.Repositories;
+﻿using Blog.DataAccessCommand.Context;
+using Blog.DataAccessCommands.Authors.Repositories;
+using Blog.DataAccessCommands.Comments.Repositories;
+using Blog.DataAccessCommands.Posts.Repositories;
+using Blog.DataAccessCommands.Subjects.Repositories;
+using Blog.Domains.Authors.Repositories;
 using Blog.Domains.Comments.Repositories;
 using Blog.Domains.Commons;
 using Blog.Domains.Posts.Repositories;
 using Blog.Domains.Subjects.Repositories;
 using System.Threading.Tasks;
-using Blog.DataAccessCommand.Context;
-using Blog.DataAccessCommands.Authors.Repositories;
-using Blog.DataAccessCommands.Comments.Repositories;
-using Blog.DataAccessCommands.Posts.Repositories;
-using Blog.DataAccessCommands.Subjects.Repositories;
-using Blog.DataAccessQueries.Comments.Repositories;
-using Blog.DataAccessQueries.Posts.Repositories;
-using Blog.DataAccessQueries.Subjects.Repositories;
-using Microsoft.Extensions.Configuration;
+
 
 namespace Blog.DataAccessCommands.Commons
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private NewBlogContext _db;
-      
+        private readonly NewBlogContext _db;
+        private IAuthorRepositoryCommand _authorRepositoryCommand;
+        private IPostRepositoryCommand _postRepositoryCommand;
+        private ICommentRepositoryCommand _commentRepositoryCommand;
+        private ISubjectRepositoryCommand _subjectRepositoryCommand;
 
         public UnitOfWork(NewBlogContext db)
         {
             _db = db;
-           
+
+
         }
 
-        private IAuthorRepositoryCommand _authorRepositoryCommand;
+        #region AuthorRepositoryCommand
 
         public IAuthorRepositoryCommand AuthorRepositoryCommand
         {
@@ -42,24 +43,10 @@ namespace Blog.DataAccessCommands.Commons
             }
         }
 
-        private IAuthorRepositoryCommand _repositoryCommand;
+        #endregion
 
-        public IAuthorRepositoryCommand RepositoryCommand
-        {
-            get
-            {
+        #region PostRepositoryCommand
 
-                if (_repositoryCommand == null)
-                {
-                    _repositoryCommand = new AuthorRepositoryCommand(_db);
-                }
-
-                return _repositoryCommand;
-            }
-        }
-
-
-        private IPostRepositoryCommand _postRepositoryCommand;
         public IPostRepositoryCommand PostRepositoryCommand
         {
             get
@@ -73,24 +60,9 @@ namespace Blog.DataAccessCommands.Commons
             }
         }
 
-        private IPostRepositoryQuery _postRepositoryQuery;
+        #endregion
 
-        public IPostRepositoryQuery PostRepositoryQuery
-        {
-            get
-            {
-                if (_postRepositoryQuery == null)
-                {
-                    _postRepositoryQuery = new PostRepositoryQuery();
-                }
-
-                return _postRepositoryQuery;
-
-            }
-        }
-
-
-        private ICommentRepositoryCommand _commentRepositoryCommand;
+        #region CommentRepositoryCommand
 
         public ICommentRepositoryCommand CommentRepositoryCommand
         {
@@ -106,23 +78,10 @@ namespace Blog.DataAccessCommands.Commons
             }
         }
 
-        private ICommentRepositoryQuery _commentRepositoryQuery;
 
-        public ICommentRepositoryQuery CommentRepositoryQuery
-        {
-            get
-            {
-                if (_commentRepositoryQuery == null)
-                {
-                    _commentRepositoryQuery = new CommentRepositoryQuery();
-                }
-
-                return _commentRepositoryQuery;
-            }
-        }
-
-
-        private ISubjectRepositoryCommand _subjectRepositoryCommand;
+        #endregion
+        
+        #region SubjectRepositoryCommand
 
         public ISubjectRepositoryCommand SubjectRepositoryCommand
         {
@@ -137,31 +96,24 @@ namespace Blog.DataAccessCommands.Commons
             }
         }
 
-
-
-        private ISubjectRepositoryQuery _subjectRepositoryQuery;
-
-        public ISubjectRepositoryQuery SubjectRepositoryQuery
-        {
-            get
-            {
-                if (_subjectRepositoryQuery == null)
-                {
-                    _subjectRepositoryQuery = new SubjectRepositoryQuery();
-                }
-
-                return _subjectRepositoryQuery;
-            }
-        }
+        #endregion
+        
+        #region Save
 
         public async Task Save()
         {
             await _db.SaveChangesAsync();
         }
 
+        #endregion
+
+        #region Dispose
+
         public void Dispose()
         {
-          _db?.Dispose();
+            _db?.Dispose();
         }
+
+        #endregion
     }
 }

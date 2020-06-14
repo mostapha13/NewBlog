@@ -1,4 +1,4 @@
-﻿namespace Blog.Domains.Common
+﻿namespace Blog.Domains.Commons
 {
     public abstract class BaseEntity
     {

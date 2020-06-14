@@ -7,6 +7,7 @@ namespace Blog.Domains.Authors.Repositories
     public interface IAuthorRepositoryQuery
     {
       Task<IEnumerable<Author>> GetAllAuthor();
+      Task<Author> GetAuthorById(int id);
 
       Task<bool> IsEmailExist(string email);
 

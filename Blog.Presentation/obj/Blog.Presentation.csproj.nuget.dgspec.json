@@ -195,9 +195,6 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Dotin\\new\\Blog\\Blog\\Blog.DataAccessQuery\\Blog.DataAccessQueries.csproj": {
-                "projectPath": "C:\\Dotin\\new\\Blog\\Blog\\Blog.DataAccessQuery\\Blog.DataAccessQueries.csproj"
-              },
               "C:\\Dotin\\new\\Blog\\Blog\\Blog.Domain\\Blog.Domains.csproj": {
                 "projectPath": "C:\\Dotin\\new\\Blog\\Blog\\Blog.Domain\\Blog.Domains.csproj"
               }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Blog.Domains.Authors.Entities;
-using Blog.Domains.Common;
+using Blog.Domains.Commons;
 using Blog.Domains.Comments.Entities;
 using Blog.Domains.Subjects.Entities;
 

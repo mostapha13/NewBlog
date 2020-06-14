@@ -10,7 +10,7 @@ namespace Blog.DataAccessCommands.Authors.Repositories
     {
        
 
-        private NewBlogContext _db;
+        private readonly NewBlogContext _db;
 
         public AuthorRepositoryCommand(NewBlogContext db)
         {
@@ -18,14 +18,16 @@ namespace Blog.DataAccessCommands.Authors.Repositories
         }
 
 
+        #region AddAuthor
 
         public async Task AddAuthor(Author author)
         {
-           
-           await _db.Authors.AddAsync(author);
-          
+
+            await _db.Authors.AddAsync(author);
+
         }
 
+        #endregion
 
     }
 }

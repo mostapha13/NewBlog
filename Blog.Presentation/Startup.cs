@@ -68,6 +68,8 @@ namespace Blog.Presentation
 
             #endregion
 
+
+
             #region IOC
 
             services.AddScoped<IUnitOfWork,UnitOfWork>();
@@ -75,6 +77,7 @@ namespace Blog.Presentation
             #region Command
 
             services.AddScoped<IAuthorRepositoryCommand, AuthorRepositoryCommand>();
+
 
             #endregion
 
@@ -85,6 +88,7 @@ namespace Blog.Presentation
             #endregion
 
 
+    
             #endregion
 
             #region Validation

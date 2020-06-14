@@ -5,6 +5,7 @@ using Blog.Domains.Enums;
 using Blog.Domains.Subjects.Commands;
 using Blog.Domains.Subjects.Entities;
 using MediatR;
+using Serilog;
 
 namespace Blog.ApplicationServices.Subjects.Commands.Handlers
 {
@@ -20,13 +21,15 @@ namespace Blog.ApplicationServices.Subjects.Commands.Handlers
 
         public async Task<ResultStatus> Handle(AddSubjectCommand request, CancellationToken cancellationToken)
         {
-
+            Log.Information("AddSubjectCommand");
             Subject subject=new Subject()
             {
                 Title = request.Title
             };
              await _db.SubjectRepositoryCommand.AddSubject(subject);
              await _db.Save();
+
+             Log.Information("Success AddSubjectCommand");
              return ResultStatus.Success;
         }
     }

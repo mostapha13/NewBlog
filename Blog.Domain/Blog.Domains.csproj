@@ -5,14 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Authors\Dtos\" />
-    <Folder Include="Comments\Dtos\" />
     <Folder Include="Comments\Commands\" />
     <Folder Include="Comments\Queries\" />
-    <Folder Include="Posts\Dtos\" />
     <Folder Include="Posts\Commands\" />
     <Folder Include="Posts\Queries\" />
-    <Folder Include="Subjects\Dtos\" />
   </ItemGroup>
 
   <ItemGroup>

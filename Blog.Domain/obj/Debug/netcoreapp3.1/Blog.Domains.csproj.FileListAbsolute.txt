@@ -6,4 +6,3 @@ C:\Dotin\new\Blog\Blog\Blog.Domain\obj\Debug\netcoreapp3.1\Blog.Domains.Assembly
 C:\Dotin\new\Blog\Blog\Blog.Domain\obj\Debug\netcoreapp3.1\Blog.Domains.csproj.CoreCompileInputs.cache
 C:\Dotin\new\Blog\Blog\Blog.Domain\obj\Debug\netcoreapp3.1\Blog.Domains.dll
 C:\Dotin\new\Blog\Blog\Blog.Domain\obj\Debug\netcoreapp3.1\Blog.Domains.pdb
-C:\Dotin\new\Blog\Blog\Blog.Domain\obj\Debug\netcoreapp3.1\Blog.Domains.csprojAssemblyReference.cache

@@ -23,6 +23,7 @@ using Blog.Domains.Enums;
 using Blog.Domains.Posts.Entities;
 using Blog.Domains.Subjects.Entities;
 using Blog.Domains.Subjects.Repositories;
+using Blog.Presentation.Middleware;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using MediatR;
@@ -35,6 +36,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace Blog.Presentation
 {
@@ -44,7 +46,16 @@ namespace Blog.Presentation
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            
+
+            #region SeriLog
+
+            Log.Logger = new LoggerConfiguration()
+
+                .ReadFrom.Configuration(Configuration)
+                .WriteTo.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}")
+                .CreateLogger();
+            #endregion
+
         }
 
         public IConfiguration Configuration { get; }
@@ -119,7 +130,7 @@ namespace Blog.Presentation
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -128,9 +139,16 @@ namespace Blog.Presentation
 
             app.UseHttpsRedirection();
 
+
+            loggerFactory.AddSerilog();
+
+
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseMiddleware(typeof(ErrorHandling));
+
 
             app.UseEndpoints(endpoints =>
             {

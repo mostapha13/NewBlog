@@ -4,6 +4,7 @@ using Blog.Domains.Authors.Entities;
 using Blog.Domains.Authors.Queries;
 using Blog.Domains.Authors.Repositories;
 using MediatR;
+using Serilog;
 
 namespace Blog.ApplicationServices.Authors.Queries.Handlers
 {
@@ -18,6 +19,7 @@ namespace Blog.ApplicationServices.Authors.Queries.Handlers
 
         public async Task<Author> Handle(GetAuthorByIdQuery request, CancellationToken cancellationToken)
         { 
+            Log.Information("GetAuthorById"+request.Id);
 
            return await _query.GetAuthorById(request.Id);
         }

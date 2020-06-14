@@ -7,12 +7,13 @@ using Blog.Domains.Commons;
 using Blog.Domains.Enums;
 using MediatR;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Serilog;
 
 namespace Blog.ApplicationServices.Authors.Commands.Handlers
 {
     public class AddAuthorCommandHandler : IRequestHandler<AddAuthorCommand, ResultStatus>
     {
-    
+
 
         private readonly IUnitOfWork _db;
 
@@ -23,6 +24,7 @@ namespace Blog.ApplicationServices.Authors.Commands.Handlers
 
         public async Task<ResultStatus> Handle(AddAuthorCommand request, CancellationToken cancellationToken)
         {
+            Log.Information("AddAuthor"); ;
 
             Author author = new Author()
             {
@@ -35,7 +37,11 @@ namespace Blog.ApplicationServices.Authors.Commands.Handlers
 
             await _db.AuthorRepositoryCommand.AddAuthor(author);
             await _db.Save();
+
+            Log.Information("SuccessAddAuthor"); ;
+
             return ResultStatus.Success;
+
         }
     }
 }

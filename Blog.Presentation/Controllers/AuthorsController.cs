@@ -30,6 +30,7 @@ namespace Blog.Presentation.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Author>>> GetAuthors()
         {
+
             var query = new GetAllAuthorQuery();
             var result = await _mediator.Send(query);
             return result.ToList();

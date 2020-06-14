@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Blog.DataAccessCommand.Context;
+using Blog.DataAccessCommands.Context;
 using Blog.Domains.Enums;
 using Blog.Domains.Subjects.Commands;
 using Blog.Domains.Subjects.Entities;

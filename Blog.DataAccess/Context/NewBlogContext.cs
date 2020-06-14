@@ -4,10 +4,10 @@ using Blog.Domains.Posts.Entities;
 using Blog.Domains.Subjects.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Blog.DataAccessCommand.Context
+namespace Blog.DataAccessCommands.Context
 {
     public class NewBlogContext : DbContext
-    { 
+    {
         public NewBlogContext(DbContextOptions<NewBlogContext> options) : base(options)
         {
 

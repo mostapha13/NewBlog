@@ -1,14 +1,13 @@
-﻿using System.Threading.Tasks;
-using Blog.DataAccessCommand.Context;
+﻿using Blog.DataAccessCommands.Context;
 using Blog.Domains.Authors.Entities;
 using Blog.Domains.Authors.Repositories;
-using Blog.Domains.Commons;
+using System.Threading.Tasks;
 
 namespace Blog.DataAccessCommands.Authors.Repositories
 {
-    public class AuthorRepositoryCommand: IAuthorRepositoryCommand
+    public class AuthorRepositoryCommand : IAuthorRepositoryCommand
     {
-       
+
 
         private readonly NewBlogContext _db;
 
@@ -24,7 +23,7 @@ namespace Blog.DataAccessCommands.Authors.Repositories
         {
 
             await _db.Authors.AddAsync(author);
-           
+
 
         }
 

@@ -2,8 +2,8 @@
 
 namespace Blog.DataAccessCommands.Comments.Repositories
 {
-    public class CommentRepositoryCommand: ICommentRepositoryCommand
+    public class CommentRepositoryCommand : ICommentRepositoryCommand
     {
-        
+
     }
 }

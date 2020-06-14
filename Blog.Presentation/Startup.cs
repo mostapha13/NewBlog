@@ -4,7 +4,7 @@ using Blog.ApplicationServices.Behaviors;
 using Blog.ApplicationServices.Comments.Validations;
 using Blog.ApplicationServices.Posts.Validations;
 using Blog.ApplicationServices.Subjects.Validations;
-using Blog.DataAccessCommand.Context;
+using Blog.DataAccessCommands.Context;
 using Blog.DataAccessCommands.Authors.Repositories;
 using Blog.DataAccessCommands.Commons;
 using Blog.DataAccessCommands.Subjects.Repositories;

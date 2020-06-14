@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using Blog.DataAccessCommand.Context;
+using Blog.DataAccessCommands.Context;
 using Blog.Domains.Subjects.Entities;
 using Blog.Domains.Subjects.Repositories;
 

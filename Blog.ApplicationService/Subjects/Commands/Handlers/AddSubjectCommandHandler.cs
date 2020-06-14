@@ -1,15 +1,15 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using Blog.Domains.Commons;
+﻿using Blog.Domains.Commons;
 using Blog.Domains.Enums;
 using Blog.Domains.Subjects.Commands;
 using Blog.Domains.Subjects.Entities;
 using MediatR;
 using Serilog;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Blog.ApplicationServices.Subjects.Commands.Handlers
 {
-    public class AddSubjectCommandHandler:IRequestHandler<AddSubjectCommand,ResultStatus>
+    public class AddSubjectCommandHandler : IRequestHandler<AddSubjectCommand, ResultStatus>
     {
         private readonly IUnitOfWork _db;
 
@@ -22,15 +22,15 @@ namespace Blog.ApplicationServices.Subjects.Commands.Handlers
         public async Task<ResultStatus> Handle(AddSubjectCommand request, CancellationToken cancellationToken)
         {
             Log.Information("AddSubjectCommand");
-            Subject subject=new Subject()
+            Subject subject = new Subject()
             {
                 Title = request.Title
             };
-             await _db.SubjectRepositoryCommand.AddSubject(subject);
-             await _db.Save();
+            await _db.SubjectRepositoryCommand.AddSubject(subject);
+            await _db.Save();
 
-             Log.Information("Success AddSubjectCommand");
-             return ResultStatus.Success;
+            Log.Information("Success AddSubjectCommand");
+            return ResultStatus.Success;
         }
     }
 }

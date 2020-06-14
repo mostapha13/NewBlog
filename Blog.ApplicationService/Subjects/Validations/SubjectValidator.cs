@@ -3,7 +3,7 @@ using FluentValidation;
 
 namespace Blog.ApplicationServices.Subjects.Validations
 {
-    public class SubjectValidator:AbstractValidator<Subject>
+    public class SubjectValidator : AbstractValidator<Subject>
     {
         public SubjectValidator()
         {

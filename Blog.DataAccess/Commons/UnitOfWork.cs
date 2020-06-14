@@ -1,4 +1,4 @@
-﻿using Blog.DataAccessCommand.Context;
+﻿using Blog.DataAccessCommands.Context;
 using Blog.DataAccessCommands.Authors.Repositories;
 using Blog.DataAccessCommands.Comments.Repositories;
 using Blog.DataAccessCommands.Posts.Repositories;
@@ -80,7 +80,7 @@ namespace Blog.DataAccessCommands.Commons
 
 
         #endregion
-        
+
         #region SubjectRepositoryCommand
 
         public ISubjectRepositoryCommand SubjectRepositoryCommand
@@ -97,7 +97,7 @@ namespace Blog.DataAccessCommands.Commons
         }
 
         #endregion
-        
+
         #region Save
 
         public async Task Save()

@@ -1,18 +1,18 @@
-﻿using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-using Blog.Domains.Authors.Entities;
+﻿using Blog.Domains.Authors.Entities;
 using Blog.Domains.Authors.Queries;
 using Blog.Domains.Authors.Repositories;
 using MediatR;
 using Serilog;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Blog.ApplicationServices.Authors.Queries.Handlers
 {
-    public class GetAllAuthorQueryHandler:IRequestHandler<GetAllAuthorQuery,IEnumerable<Author>>
+    public class GetAllAuthorQueryHandler : IRequestHandler<GetAllAuthorQuery, IEnumerable<Author>>
     {
 
-        private IAuthorRepositoryQuery _query;
+        private readonly IAuthorRepositoryQuery _query;
 
         public GetAllAuthorQueryHandler(IAuthorRepositoryQuery query)
         {
@@ -25,7 +25,7 @@ namespace Blog.ApplicationServices.Authors.Queries.Handlers
             return await _query.GetAllAuthor();
 
 
-           
+
         }
     }
 }

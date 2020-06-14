@@ -1,13 +1,11 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using Blog.Domains.Authors.Commands;
+﻿using Blog.Domains.Authors.Commands;
 using Blog.Domains.Authors.Entities;
-using Blog.Domains.Authors.Repositories;
 using Blog.Domains.Commons;
 using Blog.Domains.Enums;
 using MediatR;
-using Microsoft.AspNetCore.Mvc.Filters;
 using Serilog;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Blog.ApplicationServices.Authors.Commands.Handlers
 {

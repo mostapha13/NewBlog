@@ -3,7 +3,7 @@ using FluentValidation;
 
 namespace Blog.ApplicationServices.Authors.Validations
 {
-    public class AuthorValidator:AbstractValidator<Author>
+    public class AuthorValidator : AbstractValidator<Author>
     {
         public AuthorValidator()
         {

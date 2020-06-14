@@ -34,8 +34,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Dotin\\new\\Blog\\Blog\\Blog.DomainService\\Blog.DomainServices.csproj": {
-                "projectPath": "C:\\Dotin\\new\\Blog\\Blog\\Blog.DomainService\\Blog.DomainServices.csproj"
+              "C:\\Dotin\\new\\Blog\\Blog\\Blog.Domain\\Blog.Domains.csproj": {
+                "projectPath": "C:\\Dotin\\new\\Blog\\Blog\\Blog.Domain\\Blog.Domains.csproj"
               }
             }
           }
@@ -60,6 +60,10 @@
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
               "version": "[8.6.2, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[8.0.1, )"
             }
           },
           "imports": [
@@ -84,12 +88,89 @@
         }
       }
     },
-    "C:\\Dotin\\new\\Blog\\Blog\\Blog.DataAccess\\Blog.DataAccessCommand.csproj": {
+    "C:\\Dotin\\new\\Blog\\Blog\\Blog.DataAccessQuery\\Blog.DataAccessQueries.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dotin\\new\\Blog\\Blog\\Blog.DataAccess\\Blog.DataAccessCommand.csproj",
-        "projectName": "Blog.DataAccessCommand",
-        "projectPath": "C:\\Dotin\\new\\Blog\\Blog\\Blog.DataAccess\\Blog.DataAccessCommand.csproj",
+        "projectUniqueName": "C:\\Dotin\\new\\Blog\\Blog\\Blog.DataAccessQuery\\Blog.DataAccessQueries.csproj",
+        "projectName": "Blog.DataAccessQueries",
+        "projectPath": "C:\\Dotin\\new\\Blog\\Blog\\Blog.DataAccessQuery\\Blog.DataAccessQueries.csproj",
+        "packagesPath": "C:\\Users\\mostapha\\.nuget\\packages\\",
+        "outputPath": "C:\\Dotin\\new\\Blog\\Blog\\Blog.DataAccessQuery\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mostapha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 19.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Dotin\\new\\Blog\\Blog\\Blog.Domain\\Blog.Domains.csproj": {
+                "projectPath": "C:\\Dotin\\new\\Blog\\Blog\\Blog.Domain\\Blog.Domains.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.35, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[1.0.19269.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Dotin\\new\\Blog\\Blog\\Blog.DataAccess\\Blog.DataAccessCommands.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Dotin\\new\\Blog\\Blog\\Blog.DataAccess\\Blog.DataAccessCommands.csproj",
+        "projectName": "Blog.DataAccessCommands",
+        "projectPath": "C:\\Dotin\\new\\Blog\\Blog\\Blog.DataAccess\\Blog.DataAccessCommands.csproj",
         "packagesPath": "C:\\Users\\mostapha\\.nuget\\packages\\",
         "outputPath": "C:\\Dotin\\new\\Blog\\Blog\\Blog.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
@@ -114,6 +195,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "C:\\Dotin\\new\\Blog\\Blog\\Blog.DataAccessQuery\\Blog.DataAccessQueries.csproj": {
+                "projectPath": "C:\\Dotin\\new\\Blog\\Blog\\Blog.DataAccessQuery\\Blog.DataAccessQueries.csproj"
+              },
               "C:\\Dotin\\new\\Blog\\Blog\\Blog.Domain\\Blog.Domains.csproj": {
                 "projectPath": "C:\\Dotin\\new\\Blog\\Blog\\Blog.Domain\\Blog.Domains.csproj"
               }
@@ -142,69 +226,6 @@
               "version": "[3.1.5, )"
             }
           },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Dotin\\new\\Blog\\Blog\\Blog.DomainService\\Blog.DomainServices.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Dotin\\new\\Blog\\Blog\\Blog.DomainService\\Blog.DomainServices.csproj",
-        "projectName": "Blog.DomainServices",
-        "projectPath": "C:\\Dotin\\new\\Blog\\Blog\\Blog.DomainService\\Blog.DomainServices.csproj",
-        "packagesPath": "C:\\Users\\mostapha\\.nuget\\packages\\",
-        "outputPath": "C:\\Dotin\\new\\Blog\\Blog\\Blog.DomainService\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\mostapha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.1.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\DevExpress 19.1\\Components\\System\\Components\\Packages": {},
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.1": {
-            "projectReferences": {
-              "C:\\Dotin\\new\\Blog\\Blog\\Blog.Domain\\Blog.Domains.csproj": {
-                "projectPath": "C:\\Dotin\\new\\Blog\\Blog\\Blog.Domain\\Blog.Domains.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
           "imports": [
             "net461",
             "net462",
@@ -264,6 +285,16 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -316,11 +347,11 @@
               "C:\\Dotin\\new\\Blog\\Blog\\Blog.ApplicationService\\Blog.ApplicationServices.csproj": {
                 "projectPath": "C:\\Dotin\\new\\Blog\\Blog\\Blog.ApplicationService\\Blog.ApplicationServices.csproj"
               },
-              "C:\\Dotin\\new\\Blog\\Blog\\Blog.DataAccess\\Blog.DataAccessCommand.csproj": {
-                "projectPath": "C:\\Dotin\\new\\Blog\\Blog\\Blog.DataAccess\\Blog.DataAccessCommand.csproj"
+              "C:\\Dotin\\new\\Blog\\Blog\\Blog.DataAccessQuery\\Blog.DataAccessQueries.csproj": {
+                "projectPath": "C:\\Dotin\\new\\Blog\\Blog\\Blog.DataAccessQuery\\Blog.DataAccessQueries.csproj"
               },
-              "C:\\Dotin\\new\\Blog\\Blog\\Blog.DomainService\\Blog.DomainServices.csproj": {
-                "projectPath": "C:\\Dotin\\new\\Blog\\Blog\\Blog.DomainService\\Blog.DomainServices.csproj"
+              "C:\\Dotin\\new\\Blog\\Blog\\Blog.DataAccess\\Blog.DataAccessCommands.csproj": {
+                "projectPath": "C:\\Dotin\\new\\Blog\\Blog\\Blog.DataAccess\\Blog.DataAccessCommands.csproj"
               },
               "C:\\Dotin\\new\\Blog\\Blog\\Blog.Domain\\Blog.Domains.csproj": {
                 "projectPath": "C:\\Dotin\\new\\Blog\\Blog\\Blog.Domain\\Blog.Domains.csproj"
@@ -337,6 +368,18 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[8.6.2, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.5, )"
@@ -345,11 +388,19 @@
               "target": "Package",
               "version": "[3.1.5, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.5, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.3, )"
             }
           },
           "imports": [

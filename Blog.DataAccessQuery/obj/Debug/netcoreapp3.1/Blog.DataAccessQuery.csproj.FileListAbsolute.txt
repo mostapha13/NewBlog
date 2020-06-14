@@ -6,7 +6,7 @@ C:\Dotin\new\Blog\Blog\Blog.DataAccessQuery\bin\Debug\netcoreapp3.1\Blog.Domains
 C:\Dotin\new\Blog\Blog\Blog.DataAccessQuery\obj\Debug\netcoreapp3.1\Blog.DataAccessQuery.csprojAssemblyReference.cache
 C:\Dotin\new\Blog\Blog\Blog.DataAccessQuery\obj\Debug\netcoreapp3.1\Blog.DataAccessQuery.AssemblyInfoInputs.cache
 C:\Dotin\new\Blog\Blog\Blog.DataAccessQuery\obj\Debug\netcoreapp3.1\Blog.DataAccessQuery.AssemblyInfo.cs
-C:\Dotin\new\Blog\Blog\Blog.DataAccessQuery\obj\Debug\netcoreapp3.1\Blog.DataAccessQuery.csproj.CoreCompileInputs.cache
 C:\Dotin\new\Blog\Blog\Blog.DataAccessQuery\obj\Debug\netcoreapp3.1\Blog.DataAccessQuery.csproj.CopyComplete
 C:\Dotin\new\Blog\Blog\Blog.DataAccessQuery\obj\Debug\netcoreapp3.1\Blog.DataAccessQuery.dll
 C:\Dotin\new\Blog\Blog\Blog.DataAccessQuery\obj\Debug\netcoreapp3.1\Blog.DataAccessQuery.pdb
+C:\Dotin\new\Blog\Blog\Blog.DataAccessQuery\obj\Debug\netcoreapp3.1\Blog.DataAccessQuery.csproj.CoreCompileInputs.cache

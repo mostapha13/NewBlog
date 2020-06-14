@@ -8,10 +8,11 @@
     ".NETCoreApp,Version=v3.1": {
       "Blog.ApplicationServices/1.0.0": {
         "dependencies": {
-          "Blog.DomainServices": "1.0.0",
+          "Blog.Domains": "1.0.0",
           "FluentValidation": "8.6.2",
           "FluentValidation.AspNetCore": "8.6.2",
-          "FluentValidation.DependencyInjectionExtensions": "8.6.2"
+          "FluentValidation.DependencyInjectionExtensions": "8.6.2",
+          "MediatR": "8.0.1"
         },
         "runtime": {
           "Blog.ApplicationServices.dll": {}
@@ -52,19 +53,35 @@
           }
         }
       },
+      "MediatR/8.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/MediatR.dll": {
+            "assemblyVersion": "8.0.1.0",
+            "fileVersion": "8.0.1.0"
+          }
+        }
+      },
+      "MediatR.Extensions.Microsoft.DependencyInjection/8.0.0": {
+        "dependencies": {
+          "MediatR": "8.0.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MediatR.Extensions.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.0"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.0": {},
       "System.ComponentModel.Annotations/4.4.1": {},
       "Blog.Domains/1.0.0": {
-        "runtime": {
-          "Blog.Domains.dll": {}
-        }
-      },
-      "Blog.DomainServices/1.0.0": {
         "dependencies": {
-          "Blog.Domains": "1.0.0"
+          "MediatR": "8.0.1",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "8.0.0"
         },
         "runtime": {
-          "Blog.DomainServices.dll": {}
+          "Blog.Domains.dll": {}
         }
       }
     }
@@ -96,6 +113,20 @@
       "path": "fluentvalidation.dependencyinjectionextensions/8.6.2",
       "hashPath": "fluentvalidation.dependencyinjectionextensions.8.6.2.nupkg.sha512"
     },
+    "MediatR/8.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nqtv05FHNNNLmEv4QN9pRtmSLa0bnDPciOjLKpA/k5FZIVS72vPyY3/1lHQ9V/dcQSMA5ZLig62SyRk2cSKNBA==",
+      "path": "mediatr/8.0.1",
+      "hashPath": "mediatr.8.0.1.nupkg.sha512"
+    },
+    "MediatR.Extensions.Microsoft.DependencyInjection/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qGa+dbfrpk6y01swgc0uM+jG5tkb5xVeY1P4iByd3NQCDO7nmrMBnBRoMGhKlSigQ6iWXDiwOpzC01W4xrJxLg==",
+      "path": "mediatr.extensions.microsoft.dependencyinjection/8.0.0",
+      "hashPath": "mediatr.extensions.microsoft.dependencyinjection.8.0.0.nupkg.sha512"
+    },
     "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.0": {
       "type": "package",
       "serviceable": true,
@@ -111,11 +142,6 @@
       "hashPath": "system.componentmodel.annotations.4.4.1.nupkg.sha512"
     },
     "Blog.Domains/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Blog.DomainServices/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

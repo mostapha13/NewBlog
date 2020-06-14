@@ -3,27 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.Presentation", "Blog.Presentation\Blog.Presentation.csproj", "{EA7673F1-FD9F-4B11-9E6A-3C65744F6421}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.Presentation", "Blog.Presentation\Blog.Presentation.csproj", "{EA7673F1-FD9F-4B11-9E6A-3C65744F6421}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.Domains", "Blog.Domain\Blog.Domains.csproj", "{CB5445D0-1ACD-4336-B1CE-F3A0C7CDD789}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.Domains", "Blog.Domain\Blog.Domains.csproj", "{CB5445D0-1ACD-4336-B1CE-F3A0C7CDD789}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.DomainServices", "Blog.DomainService\Blog.DomainServices.csproj", "{A0E3CBB0-13CD-4A30-815F-5A36038F2F92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.ApplicationServices", "Blog.ApplicationService\Blog.ApplicationServices.csproj", "{D430FF1F-FFF4-4819-BCC3-3F2B68EDB42F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.ApplicationServices", "Blog.ApplicationService\Blog.ApplicationServices.csproj", "{D430FF1F-FFF4-4819-BCC3-3F2B68EDB42F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.DataAccessCommand", "Blog.DataAccess\Blog.DataAccessCommand.csproj", "{8553B5EF-B120-4A29-9BC1-7FA5F9FB1FDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.DataAccessCommands", "Blog.DataAccess\Blog.DataAccessCommands.csproj", "{8553B5EF-B120-4A29-9BC1-7FA5F9FB1FDF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-Domains", "01-Domains", "{15F7DD54-9039-4912-8009-44D1B45F109E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-DomainServices", "02-DomainServices", "{623CB9AC-A106-4688-95D0-BE16D3E9BACA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-ApplicationServices", "02-ApplicationServices", "{0E5ACF80-D7B2-404B-80ED-AABF58722C84}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-ApplicationServices", "03-ApplicationServices", "{0E5ACF80-D7B2-404B-80ED-AABF58722C84}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-DataAccess", "03-DataAccess", "{67534421-FCB6-4D88-BCC4-9AFBA6639AB4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04-DataAccess", "04-DataAccess", "{67534421-FCB6-4D88-BCC4-9AFBA6639AB4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04-Presentation", "04-Presentation", "{3A1D33D5-826D-474A-9BA5-71AF6FE29418}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05-Presentation", "05-Presentation", "{3A1D33D5-826D-474A-9BA5-71AF6FE29418}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.DataAccessQuery", "Blog.DataAccessQuery\Blog.DataAccessQuery.csproj", "{16B0A405-E36D-42CD-A97D-D301A0589F0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.DataAccessQueries", "Blog.DataAccessQuery\Blog.DataAccessQueries.csproj", "{16B0A405-E36D-42CD-A97D-D301A0589F0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +35,6 @@ Global
 		{CB5445D0-1ACD-4336-B1CE-F3A0C7CDD789}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB5445D0-1ACD-4336-B1CE-F3A0C7CDD789}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB5445D0-1ACD-4336-B1CE-F3A0C7CDD789}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A0E3CBB0-13CD-4A30-815F-5A36038F2F92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A0E3CBB0-13CD-4A30-815F-5A36038F2F92}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A0E3CBB0-13CD-4A30-815F-5A36038F2F92}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A0E3CBB0-13CD-4A30-815F-5A36038F2F92}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D430FF1F-FFF4-4819-BCC3-3F2B68EDB42F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D430FF1F-FFF4-4819-BCC3-3F2B68EDB42F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D430FF1F-FFF4-4819-BCC3-3F2B68EDB42F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -62,7 +54,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{EA7673F1-FD9F-4B11-9E6A-3C65744F6421} = {3A1D33D5-826D-474A-9BA5-71AF6FE29418}
 		{CB5445D0-1ACD-4336-B1CE-F3A0C7CDD789} = {15F7DD54-9039-4912-8009-44D1B45F109E}
-		{A0E3CBB0-13CD-4A30-815F-5A36038F2F92} = {623CB9AC-A106-4688-95D0-BE16D3E9BACA}
 		{D430FF1F-FFF4-4819-BCC3-3F2B68EDB42F} = {0E5ACF80-D7B2-404B-80ED-AABF58722C84}
 		{8553B5EF-B120-4A29-9BC1-7FA5F9FB1FDF} = {67534421-FCB6-4D88-BCC4-9AFBA6639AB4}
 		{16B0A405-E36D-42CD-A97D-D301A0589F0A} = {67534421-FCB6-4D88-BCC4-9AFBA6639AB4}

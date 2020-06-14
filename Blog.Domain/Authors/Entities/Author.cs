@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Blog.Domains.Common;
 using Blog.Domains.Posts.Entities;
 
@@ -15,6 +16,9 @@ namespace Blog.Domains.Authors.Entities
         public string Email { get; set; }
 
         #endregion
+
+ 
+
 
         #region Relations
 

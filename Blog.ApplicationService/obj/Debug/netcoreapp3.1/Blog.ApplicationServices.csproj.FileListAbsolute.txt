@@ -2,13 +2,11 @@ C:\Dotin\new\Blog\Blog\Blog.ApplicationService\bin\Debug\netcoreapp3.1\Blog.Appl
 C:\Dotin\new\Blog\Blog\Blog.ApplicationService\bin\Debug\netcoreapp3.1\Blog.ApplicationServices.dll
 C:\Dotin\new\Blog\Blog\Blog.ApplicationService\bin\Debug\netcoreapp3.1\Blog.ApplicationServices.pdb
 C:\Dotin\new\Blog\Blog\Blog.ApplicationService\bin\Debug\netcoreapp3.1\Blog.Domains.dll
-C:\Dotin\new\Blog\Blog\Blog.ApplicationService\bin\Debug\netcoreapp3.1\Blog.DomainServices.dll
-C:\Dotin\new\Blog\Blog\Blog.ApplicationService\bin\Debug\netcoreapp3.1\Blog.DomainServices.pdb
 C:\Dotin\new\Blog\Blog\Blog.ApplicationService\bin\Debug\netcoreapp3.1\Blog.Domains.pdb
 C:\Dotin\new\Blog\Blog\Blog.ApplicationService\obj\Debug\netcoreapp3.1\Blog.ApplicationServices.csprojAssemblyReference.cache
 C:\Dotin\new\Blog\Blog\Blog.ApplicationService\obj\Debug\netcoreapp3.1\Blog.ApplicationServices.AssemblyInfoInputs.cache
 C:\Dotin\new\Blog\Blog\Blog.ApplicationService\obj\Debug\netcoreapp3.1\Blog.ApplicationServices.AssemblyInfo.cs
+C:\Dotin\new\Blog\Blog\Blog.ApplicationService\obj\Debug\netcoreapp3.1\Blog.ApplicationServices.csproj.CoreCompileInputs.cache
 C:\Dotin\new\Blog\Blog\Blog.ApplicationService\obj\Debug\netcoreapp3.1\Blog.ApplicationServices.csproj.CopyComplete
 C:\Dotin\new\Blog\Blog\Blog.ApplicationService\obj\Debug\netcoreapp3.1\Blog.ApplicationServices.dll
 C:\Dotin\new\Blog\Blog\Blog.ApplicationService\obj\Debug\netcoreapp3.1\Blog.ApplicationServices.pdb
-C:\Dotin\new\Blog\Blog\Blog.ApplicationService\obj\Debug\netcoreapp3.1\Blog.ApplicationServices.csproj.CoreCompileInputs.cache

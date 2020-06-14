@@ -2,17 +2,27 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Blog.ApplicationServices.Authors.Validation;
-using Blog.ApplicationServices.Comments.Validation;
-using Blog.ApplicationServices.Posts.Validation;
-using Blog.ApplicationServices.Subjects.Validation;
+using Blog.ApplicationServices.Authors.Commands.Behaviors;
+using Blog.ApplicationServices.Authors.Validations;
+using Blog.ApplicationServices.Behaviors;
+using Blog.ApplicationServices.Comments.Validations;
+using Blog.ApplicationServices.Posts.Validations;
+using Blog.ApplicationServices.Subjects.Validations;
+using Blog.DataAccessCommands.Authors.Repositories;
 using Blog.DataAccessCommand.Context;
+using Blog.DataAccessCommands.Commons;
+using Blog.DataAccessQueries.Authors.Repositories;
+using Blog.Domains.Authors.Commands;
 using Blog.Domains.Authors.Entities;
+using Blog.Domains.Authors.Repositories;
 using Blog.Domains.Comments.Entities;
+using Blog.Domains.Commons;
+using Blog.Domains.Enums;
 using Blog.Domains.Posts.Entities;
 using Blog.Domains.Subjects.Entities;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,9 +37,11 @@ namespace Blog.Presentation
 {
     public class Startup
     {
+       
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            
         }
 
         public IConfiguration Configuration { get; }
@@ -38,6 +50,42 @@ namespace Blog.Presentation
         public void ConfigureServices(IServiceCollection services)
         {
 
+            #region DBContext
+
+            services.AddDbContext<NewBlogContext>(option =>
+            {
+                option.UseSqlServer(Configuration["ConnectionStrings:CommandConnection"]);
+
+            });
+
+            #endregion
+
+            #region MediatR
+
+            var assembly = AppDomain.CurrentDomain.Load("Blog.ApplicationServices");
+            services.AddMediatR(assembly);
+
+
+            #endregion
+
+            #region IOC
+
+            services.AddScoped<IUnitOfWork,UnitOfWork>();
+
+            #region Command
+
+            services.AddScoped<IAuthorRepositoryCommand, AuthorRepositoryCommand>();
+
+            #endregion
+
+            #region Query
+
+            services.AddScoped<IAuthorRepositoryQuery, AuthorRepositoryQuery>();
+
+            #endregion
+
+
+            #endregion
 
             #region Validation
 
@@ -52,13 +100,10 @@ namespace Blog.Presentation
 
             #endregion
 
-            #region DBContext
+            #region Behavior
 
-            services.AddDbContext<NewBlogContext>(option =>
-            {
-                option.UseSqlServer(Configuration["ConnectionStrings:CommandConnection"]);
-
-            });
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+            services.AddTransient(typeof(IPipelineBehavior<AddAuthorCommand, ResultStatus>), typeof(AddAuthorBehavior<AddAuthorCommand, ResultStatus>));
 
             #endregion
 

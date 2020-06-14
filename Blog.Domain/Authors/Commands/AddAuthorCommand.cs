@@ -13,5 +13,6 @@ namespace Blog.Domains.Authors.Commands
         public string Email { get; set; }
 
         #endregion
+ 
     }
 }

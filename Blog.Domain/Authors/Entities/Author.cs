@@ -18,8 +18,6 @@ namespace Blog.Domains.Authors.Entities
         #endregion
 
  
-
-
         #region Relations
 
         public virtual List<Post> Posts { get; set; }

@@ -11,7 +11,9 @@ using Blog.ApplicationServices.Subjects.Validations;
 using Blog.DataAccessCommands.Authors.Repositories;
 using Blog.DataAccessCommand.Context;
 using Blog.DataAccessCommands.Commons;
+using Blog.DataAccessCommands.Subjects.Repositories;
 using Blog.DataAccessQueries.Authors.Repositories;
+using Blog.DataAccessQueries.Subjects.Repositories;
 using Blog.Domains.Authors.Commands;
 using Blog.Domains.Authors.Entities;
 using Blog.Domains.Authors.Repositories;
@@ -20,6 +22,7 @@ using Blog.Domains.Commons;
 using Blog.Domains.Enums;
 using Blog.Domains.Posts.Entities;
 using Blog.Domains.Subjects.Entities;
+using Blog.Domains.Subjects.Repositories;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using MediatR;
@@ -77,13 +80,14 @@ namespace Blog.Presentation
             #region Command
 
             services.AddScoped<IAuthorRepositoryCommand, AuthorRepositoryCommand>();
-
+            services.AddScoped<ISubjectRepositoryCommand, SubjectRepositoryCommand>();
 
             #endregion
 
             #region Query
 
             services.AddScoped<IAuthorRepositoryQuery, AuthorRepositoryQuery>();
+            services.AddScoped<ISubjectRepositoryQuery,SubjectRepositoryQuery>();
 
             #endregion
 

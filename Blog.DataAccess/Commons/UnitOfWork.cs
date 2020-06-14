@@ -89,7 +89,7 @@ namespace Blog.DataAccessCommands.Commons
             {
                 if (_subjectRepositoryCommand == null)
                 {
-                    _subjectRepositoryCommand = new SubjectRepositoryCommand();
+                    _subjectRepositoryCommand = new SubjectRepositoryCommand(_db);
                 }
 
                 return _subjectRepositoryCommand;

@@ -14,11 +14,11 @@ namespace Blog.ApplicationServices.Authors.Commands.Handlers
     {
     
 
-        private readonly IUnitOfWork _command;
+        private readonly IUnitOfWork _db;
 
-        public AddAuthorCommandHandler(IUnitOfWork command)
+        public AddAuthorCommandHandler(IUnitOfWork db)
         {
-            _command = command;
+            _db = db;
         }
 
         public async Task<ResultStatus> Handle(AddAuthorCommand request, CancellationToken cancellationToken)
@@ -33,8 +33,8 @@ namespace Blog.ApplicationServices.Authors.Commands.Handlers
             };
 
 
-            await _command.AuthorRepositoryCommand.AddAuthor(author);
-            await _command.Save();
+            await _db.AuthorRepositoryCommand.AddAuthor(author);
+            await _db.Save();
             return ResultStatus.Success;
         }
     }

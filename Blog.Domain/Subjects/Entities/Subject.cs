@@ -7,10 +7,8 @@ namespace Blog.Domains.Subjects.Entities
     public class Subject:BaseEntity
     {
         #region Propertise
-
         public string Title { get; set; }
-
-
+        
         #endregion
 
 

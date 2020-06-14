@@ -23,8 +23,6 @@
     <Folder Include="Posts\Commands\Handlers\" />
     <Folder Include="Posts\Queries\" />
     <Folder Include="Subjects\Commands\Behaviors\" />
-    <Folder Include="Subjects\Commands\Handlers\" />
-    <Folder Include="Subjects\Queries\" />
   </ItemGroup>
 
 </Project>

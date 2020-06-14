@@ -24,6 +24,7 @@ namespace Blog.DataAccessCommands.Authors.Repositories
         {
 
             await _db.Authors.AddAsync(author);
+           
 
         }
 

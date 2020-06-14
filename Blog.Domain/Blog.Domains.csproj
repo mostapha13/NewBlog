@@ -13,8 +13,6 @@
     <Folder Include="Posts\Commands\" />
     <Folder Include="Posts\Queries\" />
     <Folder Include="Subjects\Dtos\" />
-    <Folder Include="Subjects\Commands\" />
-    <Folder Include="Subjects\Queries\" />
   </ItemGroup>
 
   <ItemGroup>

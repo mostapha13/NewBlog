@@ -14,9 +14,8 @@ using MediatR;
 
 namespace Blog.Presentation.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class SubjectsController : ControllerBase
+ 
+    public class SubjectsController : BaseController
     {
         private readonly IMediator _mediator;
 

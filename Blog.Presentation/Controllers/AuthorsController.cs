@@ -15,9 +15,8 @@ using Newtonsoft.Json;
 
 namespace Blog.Presentation.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class AuthorsController : ControllerBase
+ 
+    public class AuthorsController : BaseController
     {
         private readonly IMediator _mediator;
 

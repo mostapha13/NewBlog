@@ -1,15 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Blog.ApplicationServices.Authors.Commands.Behaviors;
 using Blog.ApplicationServices.Authors.Validations;
 using Blog.ApplicationServices.Behaviors;
 using Blog.ApplicationServices.Comments.Validations;
 using Blog.ApplicationServices.Posts.Validations;
 using Blog.ApplicationServices.Subjects.Validations;
-using Blog.DataAccessCommands.Authors.Repositories;
 using Blog.DataAccessCommand.Context;
+using Blog.DataAccessCommands.Authors.Repositories;
 using Blog.DataAccessCommands.Commons;
 using Blog.DataAccessCommands.Subjects.Repositories;
 using Blog.DataAccessQueries.Authors.Repositories;
@@ -29,20 +25,19 @@ using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Serilog;
+using System;
 
 namespace Blog.Presentation
 {
     public class Startup
     {
-       
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -86,7 +81,7 @@ namespace Blog.Presentation
 
             #region IOC
 
-            services.AddScoped<IUnitOfWork,UnitOfWork>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             #region Command
 
@@ -98,12 +93,12 @@ namespace Blog.Presentation
             #region Query
 
             services.AddScoped<IAuthorRepositoryQuery, AuthorRepositoryQuery>();
-            services.AddScoped<ISubjectRepositoryQuery,SubjectRepositoryQuery>();
+            services.AddScoped<ISubjectRepositoryQuery, SubjectRepositoryQuery>();
 
             #endregion
 
 
-    
+
             #endregion
 
             #region Validation
@@ -130,7 +125,7 @@ namespace Blog.Presentation
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -147,8 +142,12 @@ namespace Blog.Presentation
 
             app.UseAuthorization();
 
+
+            #region Middleware
+
             app.UseMiddleware(typeof(ErrorHandling));
 
+            #endregion
 
             app.UseEndpoints(endpoints =>
             {
